@@ -356,6 +356,19 @@ export class CheckoutService {
 
     return deletedRes;
   }
+
+  // ACCOUNT LINK
+  async createAccountLink(accountId: string) {
+    const accountLink: Stripe.Response<Stripe.AccountLink> =
+      await this.stripeClient.accountLinks.create({
+        account: accountId,
+        refresh_url: 'https://example.com/reauth',
+        return_url: 'https://example.com/return',
+        type: 'account_onboarding',
+      });
+
+    return accountLink;
+  }
 }
 
 // for STRIPE 14.12.2023

@@ -10,7 +10,7 @@ import { StripeModule } from 'nestjs-stripe';
     CheckoutModule,
     UsersModule,
     StripeModule.forRoot({
-      apiKey: ``,
+      apiKey: `sk_test_51JvmcsJo0yUa2i13PXtjHotQKfXKwq5iHWa5X6UomNWqAqt8HjkRaf6HJAs2pP7LrkGywUxrvVOWNp58mNReUoio00ayEFAKgR`,
       apiVersion: '2023-10-16',
     }),
   ],
